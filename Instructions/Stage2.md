@@ -59,6 +59,23 @@ You can keep the remaining settings as the default options, optionally create a 
 
 The certificate will display as “Pending validation” briefly while the certificate authority (CA) verifies domain ownership or control, so please wait until the status changes to “Issued”.
 
+![Screenshot (2208)](https://github.com/cupumelody/cloud-resume/assets/145847069/af1d0e93-e19b-4e25-a902-6c02aed97579)
+
+Now that we have our domain and an issued SSL certificate, we can proceed to point them to our CloudFront distribution.
+
+### Step 4: Domain and SSL Certificate Integration with CloudFront
+
+To begin, we need to create an A record in Route53 that directs our domain to the CloudFront distribution. An A record in AWS is a DNS record that maps a domain name to the corresponding IPv4 address of a resource. To accomplish this, we navigate to Route53 and create a public hosted zone, which serves as the container for all our DNS records.
+
+![ezgif-4-c620acd3bb](https://github.com/cupumelody/cloud-resume/assets/145847069/9aa0d463-c585-4a3d-8e7f-b5c476dcf1df)
 
 
+After creating the public hosted zone, access the newly created zone and proceed to create two A records: one for the root domain “yourdomainname.com” (Keep the Record name blank) and another for the subdomain “www.yourdomainname.com". Ensure to select the alias option, route traffic to the CloudFront distribution, and set it as a Simple routing policy. Allow a few minutes for the record to propagate.
 
+![Screenshot (2209)](https://github.com/cupumelody/cloud-resume/assets/145847069/350540c9-a5d5-4d60-8107-c6b4f863d0ce)
+
+Now, let’s return to the CloudFront distribution, click on “Edit” in the general settings, and proceed to add our alternate domains, “yourdomainname.com” and “www.yourdomainname.com" along with our SSL certificate. Once done, save the changes.
+
+You should now be able to access your website using both your domain and subdomain, allowing you to verify the presence of the SSL certificate and observe the secure connection denoted by HTTPS.
+
+![Screenshot (2210)](https://github.com/cupumelody/cloud-resume/assets/145847069/84543613-9822-4f9e-b8ed-6cc48314233e)
