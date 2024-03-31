@@ -23,9 +23,3 @@ The demo consists of 6 stages, each implementing additional components of the ar
 - [Stage4](Instructions/Stage4.md)
 - [Stage5](Instructions/Stage5.md)
 - [Stage6](Instructions/Stage6.md)
-
-
-## 1-Click Installs
-Make sure you are logged into AWS and in `us-east-1`  
-
-- [VPC](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://learn-cantrill-labs.s3.amazonaws.com/aws-elastic-wordpress-evolution/A4LVPC.yaml&stackName=A4LVPC)
