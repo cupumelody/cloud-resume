@@ -1,5 +1,4 @@
-# Stage 1
-## Building the Resume Website
+# Stage 1: Building the Resume Website
 
 Before delving into the steps of configuring S3 and CloudFront for hosting your website, let’s take a moment to grasp the advantages of utilizing HTML for your resume compared to conventional formats such as Word documents or PDFs. In today’s digital era, HTML offers a dynamic and engaging platform for presenting your resume, providing an aesthetically pleasing and interactive experience for potential employers.
 
